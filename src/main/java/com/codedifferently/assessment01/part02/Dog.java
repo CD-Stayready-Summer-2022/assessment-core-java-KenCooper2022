@@ -5,7 +5,12 @@ public class Dog extends Pet {
      * @param name name of this Dog
      * @param age age of this dog
      */
+    private String name;
+    private Integer age;
+
     public Dog(String name, Integer age) {
+        super(name,age);
+         this.age = Integer.MAX_VALUE;
 
     }
 
@@ -13,12 +18,15 @@ public class Dog extends Pet {
      * @param age age of this dog
      */
     public Dog(Integer age) {
+        super(age);
+        super.setName("Dog name");
     }
 
     /**
      * @param name name of this dog
      */
     public Dog(String name) {
+        super(name);
 
     }
 
@@ -28,13 +36,16 @@ public class Dog extends Pet {
      * name is DogName
      * age is 0
      */
-    public Dog() {
+    public Dog()
+    {
+        super.setAge(0);
+        super.setName("Dog name");
     }
 
     /**
      * @return bark as a string
      */
     public String speak() {
-        return null;
+        return "Bark";
     }
 }
